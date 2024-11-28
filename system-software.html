@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Computers - Trolley Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>System Software</h1>
+            <img src="images/logo.jpg" alt="Website Logo" id="website-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-computers.html" disabled>Personal Computers</a></li>
+                    <li><a href="smart-phones.html">Smart Phones</a></li>
+                    <li><a href="hardware-accessories.html">Hardware Accessories</a></li>
+                    <li><a href="application-software.html">Application Software</a></li>
+                    <li><a href="system-software.html">System Software</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h3 class="category-title">System Software</h3>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search Products..." onkeyup="searchProducts()">
+        </section>
+        <div class="products">
+            <div class="product" data-category="software" data-name="Windows 10 Pro" data-specs="Full Version, 64-bit" data-price="140">
+                <img src="images/system1.jpg" alt="Windows 10 Pro">
+                <p class="product-name">Windows 10 Pro</p>
+                <p class="product-specs">Full Version, 64-bit</p>
+                <p class="product-price">$140</p>
+                <button onclick="addToCart('Windows 10 Pro', 140)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="software" data-name="macOS Big Sur" data-specs="Apple's latest OS" data-price="0">
+                <img src="images/system2.jpg" alt="macOS Big Sur">
+                <p class="product-name">macOS Big Sur</p>
+                <p class="product-specs">Apple's latest OS</p>
+                <p class="product-price">Free</p>
+                <button onclick="addToCart('macOS Big Sur', 0)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="software" data-name="Windows 11 Pro" data-specs="Windows 11 Pro" data-price="0">
+                <img src="images/system3.jpg" alt="Windows 11">
+                <p class="product-name">Windows 11</p>
+                <p class="product-specs">Coolest Windows Version Ever</p>
+                <p class="product-price">$49</p>
+                <button onclick="addToCart('Windows 11 Pro', 49)">Add to Cart</button>
+            </div>
+        </div>
+        <section id="cart-summary" class="section">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <i>2024 Trolley Dash. All rights reserved. AG made this.</i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

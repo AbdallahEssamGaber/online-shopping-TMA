@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Computers - Trolley Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Application Software</h1>
+            <img src="images/logo.jpg" alt="Website Logo" id="website-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-computers.html" disabled>Personal Computers</a></li>
+                    <li><a href="smart-phones.html">Smart Phones</a></li>
+                    <li><a href="hardware-accessories.html">Hardware Accessories</a></li>
+                    <li><a href="application-software.html">Application Software</a></li>
+                    <li><a href="system-software.html">System Software</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h3 class="category-title">Application Software</h3>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search Products..." onkeyup="searchProducts()">
+        </section>
+        <div class="products">
+            <div class="product" data-category="software" data-name="Adobe Photoshop" data-specs="Creative Cloud, full version" data-price="240">
+                <img src="images/software1.jpg" alt="Adobe Photoshop">
+                <p class="product-name">Adobe Photoshop</p>
+                <p class="product-specs">Creative Cloud, full version</p>
+                <p class="product-price">$240</p>
+                <button onclick="addToCart('Adobe Photoshop', 240)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="software" data-name="Microsoft Office 365" data-specs="Home & Business, 1 Year" data-price="150">
+                <img src="images/software2.jpg" alt="Microsoft Office 365">
+                <p class="product-name">Microsoft Office 365</p>
+                <p class="product-specs">Home & Business, 1 Year</p>
+                <p class="product-price">$150</p>
+                <button onclick="addToCart('Microsoft Office 365', 150)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="software" data-name="Zoom Video Conferencing" data-specs="Pro, 1 Year Subscription" data-price="149">
+                <img src="images/software3.jpg" alt="Zoom Video Conferencing">
+                <p class="product-name">Zoom Video Conferencing</p>
+                <p class="product-specs">Pro, 1 Year Subscription</p>
+                <p class="product-price">$149</p>
+                <button onclick="addToCart('Zoom Video Conferencing', 149)">Add to Cart</button>
+            </div>
+        </div>
+        <section id="cart-summary" class="section">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <i>2024 Trolley Dash. All rights reserved. AG made this.</i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

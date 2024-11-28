@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Computers - Trolley Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Smart Phones</h1>
+            <img src="images/logo.jpg" alt="Website Logo" id="website-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-computers.html" disabled>Personal Computers</a></li>
+                    <li><a href="smart-phones.html">Smart Phones</a></li>
+                    <li><a href="hardware-accessories.html">Hardware Accessories</a></li>
+                    <li><a href="application-software.html">Application Software</a></li>
+                    <li><a href="system-software.html">System Software</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h3 class="category-title">Personal Computers</h3>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search Products..." onkeyup="searchProducts()">
+        </section>
+        <div class="products">
+            <div class="product" data-category="pc" data-name="  XPS 15" data-specs="Intel i7, 16GB RAM, 512GB SSD" data-price="1200">
+                <img src="images/pc1.jpg" alt="Dell XPS 15">
+                <p class="product-name">Dell XPS 15</p>
+                <p class="product-specs">Intel i7, 16GB RAM, 512GB SSD</p>
+                <p class="product-price">$1200</p>
+                <button onclick="addToCart('Dell XPS 15', 1200)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="pc" data-name="HP Pavilion 14" data-specs="Intel i5, 8GB RAM, 256GB SSD" data-price="850">
+                <img src="images/pc2.jpg" alt="HP Pavilion 14">
+                <p class="product-name">HP Pavilion 14</p>
+                <p class="product-specs">Intel i5, 8GB RAM, 256GB SSD</p>
+                <p class="product-price">$850</p>
+                <button onclick="addToCart('HP Pavilion 14', 850)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="pc" data-name="MacBook Pro 13" data-specs="Apple M1, 8GB RAM, 256GB SSD" data-price="1400">
+                <img src="images/pc3.jpg" alt="MacBook Pro 13">
+                <p class="product-name">MacBook Pro 13</p>
+                <p class="product-specs">Apple M1, 8GB RAM, 256GB SSD</p>
+                <p class="product-price">$1400</p>
+                <button onclick="addToCart('MacBook Pro 13', 1400)">Add to Cart</button>
+            </div>
+        </div>
+        <section id="cart-summary" class="section">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <i>2024 Trolley Dash. All rights reserved. AG made this.</i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

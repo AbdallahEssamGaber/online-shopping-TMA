@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Computers - Trolley Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Smart Phones</h1>
+            <img src="images/logo.jpg" alt="Website Logo" id="website-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-computers.html" disabled>Personal Computers</a></li>
+                    <li><a href="smart-phones.html">Smart Phones</a></li>
+                    <li><a href="hardware-accessories.html">Hardware Accessories</a></li>
+                    <li><a href="application-software.html">Application Software</a></li>
+                    <li><a href="system-software.html">System Software</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h3 class="category-title">Personal Computers</h3>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search Products..." onkeyup="searchProducts()">
+        </section>
+        <div class="products">
+            <div class="product" data-category="accessory" data-name="Logitech Wireless Mouse" data-specs="2.4GHz wireless, black" data-price="25">
+                <img src="images/accessory1.jpg" alt="Wireless Mouse">
+                <p class="product-name">Logitech Wireless Mouse</p>
+                <p class="product-specs">2.4GHz wireless, black</p>
+                <p class="product-price">$25</p>
+                <button onclick="addToCart('Logitech Wireless Mouse', 25)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="accessory" data-name="Corsair Mechanical Keyboard" data-specs="RGB, Cherry MX, wired" data-price="70">
+                <img src="images/accessory2.jpg" alt="Mechanical Keyboard">
+                <p class="product-name">Corsair Mechanical Keyboard</p>
+                <p class="product-specs">RGB, Cherry MX, wired</p>
+                <p class="product-price">$70</p>
+                <button onclick="addToCart('Corsair Mechanical Keyboard', 70)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="accessory" data-name="Anker USB-C Hub" data-specs="4 ports, 60W pass-through" data-price="40">
+                <img src="images/accessory3.jpg" alt="USB-C Hub">
+                <p class="product-name">Anker USB-C Hub</p>
+                <p class="product-specs">4 ports, 60W pass-through</p>
+                <p class="product-price">$40</p>
+                <button onclick="addToCart('Anker USB-C Hub', 40)">Add to Cart</button>
+            </div>
+        </div>
+        <section id="cart-summary" class="section">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <i>2024 Trolley Dash. All rights reserved. AG made this.</i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

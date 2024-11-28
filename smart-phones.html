@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Computers - Trolley Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Smart Phones</h1>
+            <img src="images/logo.jpg" alt="Website Logo" id="website-logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-computers.html" disabled>Personal Computers</a></li>
+                    <li><a href="smart-phones.html">Smart Phones</a></li>
+                    <li><a href="hardware-accessories.html">Hardware Accessories</a></li>
+                    <li><a href="application-software.html">Application Software</a></li>
+                    <li><a href="system-software.html">System Software</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h3 class="category-title">Smart Phones</h3>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Search Products..." onkeyup="searchProducts()">
+        </section>
+        <div class="products">
+            <div class="product" data-category="phone" data-name="iPhone 13" data-specs="6.1-inch, 128GB" data-price="800">
+                <img src="images/phone1.jpg" alt="iPhone 13">
+                <p class="product-name">iPhone 13</p>
+                <p class="product-specs">6.1-inch, 128GB</p>
+                <p class="product-price">$800</p>
+                <button onclick="addToCart('iPhone 13', 800)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="phone" data-name="Samsung Galaxy S21" data-specs="6.2-inch, 128GB" data-price="750">
+                <img src="images/phone2.jpg" alt="Samsung Galaxy S21">
+                <p class="product-name">Samsung Galaxy S21</p>
+                <p class="product-specs">6.2-inch, 128GB</p>
+                <p class="product-price">$750</p>
+                <button onclick="addToCart('Samsung Galaxy S21', 750)">Add to Cart</button>
+            </div>
+            <div class="product" data-category="phone" data-name="OnePlus 9" data-specs="6.55-inch, 128GB" data-price="700">
+                <img src="images/phone3.jpg" alt="OnePlus 9">
+                <p class="product-name">OnePlus 9</p>
+                <p class="product-specs">6.55-inch, 128GB</p>
+                <p class="product-price">$700</p>
+                <button onclick="addToCart('OnePlus 9', 700)">Add to Cart</button>
+            </div>
+        </div>
+        <section id="cart-summary" class="section">
+            <h2>Cart Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Price: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <i>2024 Trolley Dash. All rights reserved. AG made this.</i></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
